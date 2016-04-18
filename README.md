@@ -14,6 +14,23 @@ var reg = ^(\d)\1(?:(?!\1)\d)$/
 
 ```
 
+注意：
+
+```
+var reg = /^a(?!(a))\w$/g;
+
+var a = reg.exec('aa');
+console.log(a);
+
+var reg = /^a(?!(a))\w$/g;
+
+var a = reg.exec('ab');
+console.log(a);
+
+
+
+```
+
 ### 这个例子中,表示:三位数字,最后侧不能出现前两位的数字
 
 
